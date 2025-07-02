@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seuusuario.github.io/7-erros-invisiveis/sitemap.xml
+
+# Disallow specific paths (se necessário)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay (opcional)
+# Crawl-delay: 1
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
