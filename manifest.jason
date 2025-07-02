@@ -1,0 +1,61 @@
+{
+  "name": "7 Erros Invisíveis - Everton Rodrigues",
+  "short_name": "7 Erros Invisíveis",
+  "description": "Experiência interativa revelando os 7 erros que fazem negócios sangrarem mesmo com faturamento alto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#cab485",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "education", "productivity"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='256' fill='%23cab485'/%3E%3Ctext x='256' y='300' font-size='300' text-anchor='middle' fill='%23000'%3E🎯%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Ccircle cx='256' cy='256' r='256' fill='%23cab485'/%3E%3Ctext x='256' y='300' font-size='300' text-anchor='middle' fill='%23000'%3E🎯%3C/text%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ir para o 1º Erro",
+      "url": "/#world-1",
+      "description": "Pular direto para o primeiro erro invisível"
+    },
+    {
+      "name": "Ir para o Final",
+      "url": "/#world-8",
+      "description": "Pular para a conclusão"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1280 720'%3E%3Crect width='1280' height='720' fill='%23000'/%3E%3Ctext x='640' y='360' font-size='48' text-anchor='middle' fill='%23cab485'%3E7 Erros Invisíveis%3C/text%3E%3C/svg%3E",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "Vista desktop da experiência"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 750 1334'%3E%3Crect width='750' height='1334' fill='%23000'/%3E%3Ctext x='375' y='667' font-size='36' text-anchor='middle' fill='%23cab485'%3E7 Erros Invisíveis%3C/text%3E%3C/svg%3E",
+      "sizes": "750x1334",
+      "type": "image/svg+xml",
+      "form_factor": "narrow",
+      "label": "Vista mobile da experiência"
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
