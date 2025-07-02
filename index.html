@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="7 Erros Invisíveis que Estão Fazendo Seu Negócio Sangrar Mesmo com Faturamento - Experiência Interativa">
+    <meta name="author" content="Everton Rodrigues">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="7 Erros Invisíveis que Estão Fazendo Seu Negócio Sangrar">
+    <meta property="og:description" content="Experiência interativa revelando os erros que impedem seu negócio de crescer">
+    <meta property="og:url" content="https://seuusuario.github.io/7-erros-invisiveis">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="7 Erros Invisíveis que Estão Fazendo Seu Negócio Sangrar">
+    <meta property="twitter:description" content="Experiência interativa revelando os erros que impedem seu negócio de crescer">
+    
+    <title>7 Erros Invisíveis que Estão Fazendo Seu Negócio Sangrar</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🎯%3C/text%3E%3C/svg%3E">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">🎯</div>
+            <div class="loading-text">Carregando experiência...</div>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loadingProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CURSOR CUSTOMIZADO (apenas desktop) -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- INTRO CINEMATOGRÁFICA -->
+    <div class="cinema-intro" id="cinemaIntro">
+        <div class="cinema-text">Prepare-se para uma jornada</div>
+        <div class="cinema-text line2">através dos</div>
+        <div class="cinema-text line3">7 Erros Invisíveis</div>
+        <div class="skip-intro" onclick="skipIntro()">PULAR INTRO</div>
+    </div>
+
+    <!-- NAVEGAÇÃO MOBILE -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-toggle" onclick="toggleMobileNav()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="mobile-nav-menu">
+            <div class="nav-item" data-world="0">🏠 Início</div>
+            <div class="nav-item" data-world="1">1º Erro</div>
+            <div class="nav-item" data-world="2">2º Erro</div>
+            <div class="nav-item" data-world="3">3º Erro</div>
+            <div class="nav-item" data-world="4">4º Erro</div>
+            <div class="nav-item" data-world="5">5º Erro</div>
+            <div class="nav-item" data-world="6">6º Erro</div>
+            <div class="nav-item" data-world="7">7º Erro</div>
+            <div class="nav-item" data-world="8">🏆 Final</div>
+        </div>
+    </div>
+
+    <!-- NAVEGAÇÃO DESKTOP -->
+    <div class="desktop-nav">
+        <div class="nav-orbit">
+            <div class="nav-center">🎯</div>
+            <div class="nav-planet active" data-world="0">🏠</div>
+            <div class="nav-planet" data-world="1">1</div>
+            <div class="nav-planet" data-world="2">2</div>
+            <div class="nav-planet" data-world="3">3</div>
+            <div class="nav-planet" data-world="4">4</div>
+            <div class="nav-planet" data-world="5">5</div>
+            <div class="nav-planet" data-world="6">6</div>
+            <div class="nav-planet" data-world="7">7</div>
+            <div class="nav-planet" data-world="8">🏆</div>
+        </div>
+    </div>
+
+    <!-- INDICADOR DE PROGRESSO MOBILE -->
+    <div class="mobile-progress">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text">
+            <span id="currentChapter">Início</span>
+            <span id="progressPercent">0%</span>
+        </div>
+    </div>
+
+    <div class="story-universe">
+        <!-- CENA DE ABERTURA -->
+        <section class="story-scene opening-scene" id="world-0">
+            <div class="floating-debris">
+                <div class="debris"></div>
+                <div class="debris"></div>
+                <div class="debris"></div>
+                <div class="debris"></div>
+            </div>
+            
+            <div class="hero-hologram">
+                <div class="hologram-scan"></div>
+                
+                <h1 class="glitch-title">7 Erros Invisíveis que Estão Fazendo Seu Negócio Sangrar Mesmo com Faturamento</h1>
+                
+                <p class="subtitle-matrix">E por que mesmo dominando lançamentos, você ainda sente que está no fio da navalha</p>
+                
+                <div class="neural-quote">
+                    <div class="quote-text">
+                        "Esse material não foi feito pra viralizar. Foi feito pra conversar com quem já percebeu que faturamento não significa segurança. Pra quem já lançou, mas quer paz. Pra quem sente que existe uma forma mais inteligente e consciente de vender, todos os dias, sem depender da sorte do próximo pico."
+                    </div>
+                </div>
+                
+                <div class="begin-journey">
+                    <button class="journey-btn" onclick="startJourney()">
+                        <span>INICIAR JORNADA</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 1 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-1">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">01</div>
+                        <h2 class="chapter-title">O Erro da Renda em Pico</h2>
+                        <div class="chapter-subtitle">Faturar Alto e Mesmo Assim Viver no Risco</div>
+                        <div class="dimensional-quote">"Faturamento alto. Caixa vazio. Esse é o paradoxo do infoprodutor que domina lançamentos, mas não domina o jogo."</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">📉</div>
+                                <span>O que está acontecendo:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Você termina um lançamento com caixa cheio e um sorriso no Instagram. Mas nos bastidores, sabe que o dinheiro não dura mais de dois ou três meses. A equipe custa caro. O tráfego ficou mais caro. O tempo entre um pico e outro virou um deserto.
+                            </div>
+                            <div class="insight-dimension">
+                                Mesmo com 6 dígitos em 7 dias, você não sabe quanto entra nos próximos 7 dias.
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>Insight Dimensional:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Esse é o primeiro erro invisível: <span class="highlight-neural">acostumar-se à renda em picos e não perceber o custo emocional, estrutural e estratégico disso.</span> Lançamento bom não significa negócio bom. É só uma campanha que deu certo. Mas quem vive só de lançamento vive em modo de sobrevivência.
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">🎓</div>
+                                <span>A Transformação:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Não é sobre abandonar o lançamento. É sobre parar de tratá-lo como <span class="highlight-neural">única fonte de oxigênio</span>. Um negócio saudável tem <span class="highlight-neural">previsibilidade entre os picos</span>, com <span class="highlight-neural">vendas contínuas baseadas em processos reais de qualificação e conversão</span>.
+                            </div>
+                            <div class="mind-map-text">
+                                O lançamento vira uma alavanca, <strong>não uma muleta</strong>.
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "Faturamento alto com base instável é só um castelo bonito em areia movediça."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 2 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-2">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">02</div>
+                        <h2 class="chapter-title">Atraindo Gente Errada</h2>
+                        <div class="chapter-subtitle">Quando Seu Conteúdo Gera Aplauso, Mas Não Conversão</div>
+                        <div class="dimensional-quote">"Seu conteúdo bomba. Seus stories têm views. Os comentários elogiam. Mas na hora de vender... silêncio."</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">🧠</div>
+                                <span>O que está acontecendo:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Você criou um bom conteúdo. Usa as trends certas. Fala com paixão. Tem até uma comunidade que te admira. Mas, mesmo assim, <span class="highlight-neural">não vende todos os dias.</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Sabe por quê? Porque <span class="highlight-neural">relevância não é igual a intenção de compra.</span> Você está atraindo gente que te ama, mas que <span class="highlight-neural">não tem perfil ou momento de compra</span>.
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💣</div>
+                                <span>O erro invisível:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">Confundir engajamento com intenção.</span> O que parece ser validação de conteúdo, muitas vezes é só distração.
+                            </div>
+                            <div class="mind-map-text">
+                                Você pode ter 50 mil seguidores e não conseguir fechar 10 vendas — porque sua comunicação está baseada em <span class="highlight-neural">likes</span>, não em <span class="highlight-neural">diagnóstico emocional e comportamental</span>.
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">🎓</div>
+                                <span>A Evolução:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Quem quer vender todos os dias precisa de uma <span class="highlight-neural">atração intencional</span>, que:
+                            </div>
+                            <div class="neural-list">
+                                <div class="neural-item">Repele os curiosos</div>
+                                <div class="neural-item">Atrai quem sente a dor certa</div>
+                                <div class="neural-item">E já começa a gerar nutrição emocional antes mesmo do pitch</div>
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "Likes são elogios. Boletos se pagam com vendas."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 3 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-3">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">03</div>
+                        <h2 class="chapter-title">Falar Certo com a Pessoa Errada</h2>
+                        <div class="chapter-subtitle">Ainda é Falar Errado</div>
+                        <div class="dimensional-quote">"Você já entrou numa call achando que era só apresentar a proposta e fechar? Mas a pessoa só queria 'saber mais'?"</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">🧠</div>
+                                <span>O Diagnóstico:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Você marca uma reunião, apresenta com segurança, mostra o conteúdo, dá o pitch... E no fim ouve:
+                            </div>
+                            <div class="insight-dimension">
+                                "Vou pensar."<br>
+                                "Preciso conversar com meu sócio."<br>
+                                "Agora não é o momento."
+                            </div>
+                            <div class="mind-map-text">
+                                Mas a verdade é que <span class="highlight-neural">o problema pode estar antes da conversa começar.</span> Você está entrando em calls <span class="highlight-neural">sem saber com quem está falando de verdade.</span>
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>A Revelação:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">Venda é leitura.</span> Antes de falar, você precisa entender <em>com quem</em> está falando e <em>em que momento</em> essa pessoa está.
+                            </div>
+                            <div class="neural-list">
+                                <div class="neural-item">Com baixa urgência → precisa ser despertada</div>
+                                <div class="neural-item">Com alta consciência → precisa de precisão</div>
+                                <div class="neural-item">Com dúvida → precisa de escuta e validação</div>
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "A venda começa antes do pitch. Começa na leitura."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 4 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-4">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">04</div>
+                        <h2 class="chapter-title">O Produto Não Está Errado</h2>
+                        <div class="chapter-subtitle">A Entrega Está Desalinhada</div>
+                        <div class="dimensional-quote">"Você já se pegou pensando: Será que o problema sou eu? Será que meu produto já saturou?"</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>A Verdade Oculta:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">Seu produto é um remédio. Mas só cura se for entregue na dose e forma certa pra cada paciente.</span>
+                            </div>
+                            <div class="insight-dimension">
+                                "Não se troca o remédio. Se ajusta a posologia."
+                            </div>
+                            <div class="mind-map-text">
+                                Quando você domina pitch adaptativo, o mesmo produto <span class="highlight-neural">ganha novas camadas de valor percebido</span> — sem precisar reinventar nada.
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "O produto só parece errado quando a percepção está desalinhada com a real transformação."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 5 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-5">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">05</div>
+                        <h2 class="chapter-title">Rebater Objeção com Argumento</h2>
+                        <div class="chapter-subtitle">É Perder o Jogo no Meio da Partida</div>
+                        <div class="dimensional-quote">"Quando você tenta convencer... você já está perdendo."</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>A Descoberta:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">A objeção é um sintoma.</span> O papel do vendedor consciente não é rebater. É <span class="highlight-neural">entender o que está por trás.</span>
+                            </div>
+                        </div>
+
+                        <div class="revelation-block">
+                            <div class="example-simulation">
+                                <div class="simulation-title">🎯 Simulação Prática:</div>
+                                <p><strong>Lead (perfil estável):</strong> "Já tentei outros cursos e nada deu certo."</p>
+                                
+                                <div class="vs-divider">❌ Resposta Comum</div>
+                                <p>"Mas o nosso é diferente, olha esse módulo aqui..."</p>
+                                
+                                <div class="vs-divider">✅ Resposta Estratégica</div>
+                                <p>"O que mais te incomodou naqueles cursos que você tentou? Foi a forma como te acompanharam?"</p>
+                                
+                                <div class="difference-highlight">
+                                    <strong>A Diferença:</strong> Enquanto a primeira resposta <strong>confronta</strong>, a segunda <strong>conecta</strong>.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "A objeção não é um muro. É uma porta disfarçada de pedra. Mas só se abre com a pergunta certa."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 6 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-6">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">06</div>
+                        <h2 class="chapter-title">Escalar Sem Dominar o Fechamento</h2>
+                        <div class="chapter-subtitle">É Construir um Prédio Sem Fundação</div>
+                        <div class="dimensional-quote">"Contratar closer sem dominar o fechamento é como contratar um piloto sem nunca ter dirigido."</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>A Lei da Escalabilidade:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">Escala sem clareza é só repetição de erro em massa.</span>
+                            </div>
+                            <div class="neural-list">
+                                <div class="neural-item">Dominar o fechamento no 1:1</div>
+                                <div class="neural-item">Ter um pitch adaptativo validado</div>
+                                <div class="neural-item">Saber diagnosticar objeções por perfil</div>
+                                <div class="neural-item">E ter <strong>consistência nos seus próprios resultados</strong></div>
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "Quem não domina o fechamento vai terceirizar a frustração e chamar isso de escala."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ERRO 7 -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene error-world" id="world-7">
+            <div class="world-atmosphere"></div>
+            
+            <div class="chapter-portal">
+                <div class="portal-frame">
+                    <div class="chapter-header">
+                        <div class="error-number">07</div>
+                        <h2 class="chapter-title">A Vergonha de Vender Todos os Dias</h2>
+                        <div class="chapter-subtitle">E Como Ela Sabota Seu Negócio Sem Você Perceber</div>
+                        <div class="dimensional-quote">"Você diz que quer liberdade. Mas tem medo de parecer vendedor demais."</div>
+                    </div>
+                    
+                    <div class="content-matrix">
+                        <div class="revelation-block">
+                            <div class="section-header">
+                                <div class="section-icon-3d">💡</div>
+                                <span>A Libertação:</span>
+                            </div>
+                            <div class="mind-map-text">
+                                <span class="highlight-neural">Não existe liberdade sem autonomia de receita.</span> Quem tem vergonha de vender, na verdade, <span class="highlight-neural">tem medo de ser julgado.</span>
+                            </div>
+                            <div class="mind-map-text">
+                                Quando você entende que vender é conduzir uma decisão consciente — não manipular —, tudo muda:
+                            </div>
+                            <div class="neural-list">
+                                <div class="neural-item">A sua comunicação vira ponte</div>
+                                <div class="neural-item">Seu conteúdo vira pré-conversa</div>
+                                <div class="neural-item">Seu pitch vira um convite</div>
+                            </div>
+                        </div>
+
+                        <div class="wisdom-crystal">
+                            "Quem tem vergonha de vender, vive pedindo desculpas por transformar."
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL ÉPICO -->
+        <div class="world-transition">
+            <div class="portal-gate"></div>
+        </div>
+
+        <section class="story-scene finale-universe" id="world-8">
+            <div class="universe-stars">
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+                <div class="star"></div>
+            </div>
+            
+            <div class="finale-content">
+                <h2 class="transformation-title">O Começo da Sua Nova Era</h2>
+                
+                <div class="finale-text">
+                    Se você chegou até aqui, já entendeu que não é a falta de técnica, nem de vontade, que trava seu crescimento.
+                    <br><br>
+                    Você não precisa de mais uma fórmula. Você precisa de estrutura. De inteligência aplicada. De um processo que respeite sua profundidade e amplifique seu potencial.
+                    <br><br>
+                    Vender todos os dias, com leveza, consciência e performance, <span class="highlight-neural">não é sobre fazer mais barulho.</span> É sobre falar com quem precisa ouvir, da forma certa, no momento certo.
+                </div>
+
+                <div class="destiny-portal">
+                    <div class="portal-headline">🚀 O Futuro Te Aguarda</div>
+                    <div class="portal-text">
+                        Algo novo está sendo construído. Algo que não veio pra repetir o que já existe. Veio pra <strong>redefinir como se vende no digital.</strong>
+                        <br><br>
+                        Fique atento ao meu feed. As próximas semanas vão surpreender muita gente. Mas quem estiver atento, vai entender antes. E vai estar à frente.
+                        <br><br>
+                        O mercado está prestes a mudar. E eu quero que você esteja pronto.
+                    </div>
+                </div>
+
+                <div class="signature-dimensional">
+                    <div class="author-avatar">ER</div>
+                    <div class="author-name">Everton Rodrigues</div>
+                    <div class="author-tagline">"Vender é conversar com quem está pronto. E saber o que dizer."</div>
+                    
+                    <a href="https://instagram.com/evertonmrodrigues" target="_blank" class="social-portal">
+                        <span>📱 Entre no Universo: @evertonmrodrigues</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- MODAL DE CONQUISTA -->
+    <div class="achievement-modal" id="achievementModal">
+        <div class="achievement-content">
+            <div class="achievement-icon">🏆</div>
+            <div class="achievement-title">JORNADA COMPLETADA!</div>
+            <div class="achievement-desc">
+                Você desbloqueou todos os 7 Erros Invisíveis e está pronto para a transformação!
+            </div>
+            <button class="close-achievement" onclick="closeAchievement()">CONTINUAR EVOLUINDO</button>
+        </div>
+    </div>
+
+    <!-- BOTÃO DE SCROLL TO TOP (mobile) -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+
+    <!-- Analytics placeholder (substitua pelos seus códigos) -->
+    <!-- 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    -->
+</body>
+</html>
