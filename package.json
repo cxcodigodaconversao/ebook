@@ -1,0 +1,12 @@
+{
+  "name": "7-erros-invisiveis",
+  "version": "1.0.0",
+  "description": "Ebook interativo - 7 Erros Invisíveis",
+  "main": "index.html",
+  "scripts": {
+    "start": "index.html"
+  },
+  "keywords": ["ebook", "interativo", "vendas"],
+  "author": "Everton Rodrigues",
+  "license": "MIT"
+}
